@@ -1,0 +1,249 @@
+/* ===================== global =================== */
+:root {
+    --mainGreenColor: #304D30;
+    --btnGreenColor: #28A745;
+}  
+
+/* ===================== header styling =================== */
+
+.navbar {
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px 5%;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 123, 255, 0.03);
+    border: 1px solid #CECECE;
+    border-radius: 8px;
+    padding: 10px;
+    flex: 1;
+    max-width: 600px;
+    position: relative;
+}
+
+.categories-dropdown {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #666666;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.categories-dropdown img {
+    width: 16px;
+    margin-left: 5px;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #666;
+    background: transparent;
+}
+
+.search-btn {
+    background: var(--btnGreenColor);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    
+}
+
+.search-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+/* User Actions */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.cart img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.profile img:first-child {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid rgba(102, 102, 102, 0.43);
+}
+
+.profile img:last-child {
+    width: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .search-bar {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .search-bar {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .categories-dropdown {
+        margin-bottom: 8px;
+    }
+
+    .user-actions {
+        gap: 12px;
+    }
+}
+/* ===================== footer styling =================== */
+.footer {
+    background: var(--mainGreenColor);
+    color: #E0EEF9;
+    padding: 16px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1240px;
+    width: 100%;
+    gap: 20px;
+}
+
+
+.footer-section h3 {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+
+
+.footer-section ul li {
+    margin: 8px 0;
+}
+
+
+ 
+ .footLinks a:hover{
+    color: #FFFFFF; 
+ }
+ .footer-section  a{
+    text-decoration: none;
+    color: #E0EEF9;
+    font-size: 16px;
+}
+.footer-section  a:hover {
+    color: #FFFFFF;
+}
+
+.contact p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+.social-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.social-icons a img {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid #E0EEF9;
+    width: 100%;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #E0EEF9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.innerFootBtm{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        min-width: 100%;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 5%;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
+}
