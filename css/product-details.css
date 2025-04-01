@@ -109,6 +109,12 @@ p {
   /* height: 44px; */
 }
 
+.favorite {
+  cursor: pointer;
+  
+}
+
+
 /* Delivery and return info */
 .delivery-info,
 .return-policy {
