@@ -62,31 +62,10 @@
               <th>Price</th>
               <th>Quantity</th>
               <th>Subtotal</th>
+              <th> </th>
           </tr>
       </thead>
       <tbody>
-          <tr>
-              <td class="product-info">
-                  <img src="images/Monitor-Cart-Small.png" alt="LCD Monitor">
-                  <span>LCD Monitor</span>
-              </td>
-              <td>$650</td>
-              <td>
-                <input type="number" value="1">
-              </td>
-              <td>$650</td>
-          </tr>
-          <tr>
-              <td class="product-info">
-                  <img src="images/Gamepad-Cart-Small.png" alt="H1 Gamepad">
-                  <span>H1 Gamepad</span>
-              </td>
-              <td>$550</td>
-              <td>
-                  <input type="number" value="1">
-              </td>
-              <td>$1100</td>
-          </tr>
       </tbody>
   </table>
 
@@ -102,11 +81,11 @@
 
   <div class="cart-total">
       <h3>Cart Total</h3>
-      <p>Subtotal: <span>$1750</span></p>
+      <p>Subtotal: <span id="cart-subtotal">$0</span></p>
       <hr>
       <p>Shipping: <span>Free</span></p>
       <hr>
-      <p class="total">Total: <span>$1750</span></p>
+      <p class="total">Total: <span id="cart-total">$0</span></p>
       <button class="checkout-btn">Proceed to checkout</button>
   </div>
 </div>

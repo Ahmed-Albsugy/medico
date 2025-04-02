@@ -225,8 +225,13 @@ p {
 }
  
 .related-products p {
-    font-family: "Nunito" sans-serif;
+    font-family: "Nunito", sans-serif;
     font-size: 16px;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
+}
+
+.related-products p a {
+  text-decoration: none;
+  color: #000;
 }
