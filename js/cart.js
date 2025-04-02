@@ -45,7 +45,14 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "index.html";
     });
     
-    checkoutBtn.addEventListener("click", () => {
-        window.location.href = "checkout.html";
+    document.querySelector(".checkout-btn").addEventListener("click", function () {
+        const isLoggedIn = false;
+    
+        if (!isLoggedIn) {
+            window.location.href = "signin.html"; // صفحة تسجيل الدخول
+        } else {
+            window.location.href = "checkout.html"; // صفحة الدفع
+        }
     });
+    
 });
