@@ -89,12 +89,16 @@
     width: 24px;
     cursor: pointer;
 }
+.profile-container{
+    cursor: pointer;
+    position: relative;
+}
 
 .profile {
     display: flex;
     align-items: center;
     gap: 8px;
-    cursor: pointer;
+   
 }
 
 .profile img:first-child {
@@ -106,6 +110,38 @@
 
 .profile img:last-child {
     width: 18px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 120px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: none; /* Hidden by default */
+}
+/* Show dropdown when not hidden */
+.dropdown.show {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+.dropBtn{
+    border: none;
+    background: none;
+    cursor: pointer;
+
+}
+.dropdown-item:hover {
+    background-color: #f4f4f4;
 }
 
 /* Responsive Design */
