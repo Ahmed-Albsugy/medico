@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
         image: this.getAttribute("data-image"),
         qty: quantity,
       });
-      alert(this.getAttribute("data-name") + " added to cart!");
+     
     }
     localStorage.setItem("cart", JSON.stringify(cart));
   }

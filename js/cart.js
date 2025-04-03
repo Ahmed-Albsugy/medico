@@ -69,13 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCart();
   });
 
-  document.querySelector(".update-btn").addEventListener("click", updateCart);
+ // document.querySelector(".update-btn").addEventListener("click", updateCart);
 
-  returnBtn.addEventListener("click", () => {
-    window.location.href = "index.html";
-  });
+ // returnBtn.addEventListener("click", () => {
+ //   window.location.href = "index.html";
+ // });
 
-  document.getElementById("checkout-btn").addEventListener("click", checkout);
+ // document.getElementById("checkout-btn").addEventListener("click", checkout);
   //         function () {
   //       const isLoggedIn = false;
 
@@ -86,7 +86,23 @@ document.addEventListener("DOMContentLoaded", () => {
   //       }
   //     }
   // );
+ 
 
+  function isUserSignedIn() {
+
+      return localStorage.getItem('userLoggedIn') === 'true'; 
+  }
+  
+  document.getElementById('checkout-btn').addEventListener('click', function() {
+      if (isUserSignedIn()) {
+          window.location.href = 'checkout.html'; // توجيه لصفحة checkout
+      } else {
+
+ window.location.href = 'login-register.html';     
+ }
+  });
+
+  
   function checkout() {
     const isLoggedIn = true;
 

@@ -196,8 +196,13 @@ p {
   cursor: pointer;
   width: 101%;
   font-family: "Nunito" sans-serif;
- 
+} 
+
+.product:hover {
+ color: #218838; /* اللون عند التحويم */
+  transform: scale(1.1); /* تكبير الزر */
 }
+
 .favorite {
   margin: 10px;
   margin-right: 0px;
