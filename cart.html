@@ -10,6 +10,8 @@
 
   <title>Medico</title>
   <script defer src="js/main.js"></script>
+  <script type="module" src="js/firebase-config.js"></script>
+  <script defer type="module" src="js/cart.js"></script>
 
 </head>
 
@@ -86,7 +88,7 @@
       <p>Shipping: <span>Free</span></p>
       <hr>
       <p class="total">Total: <span id="cart-total">$0</span></p>
-      <button class="checkout-btn">Proceed to checkout</button>
+      <button class="checkout-btn" id="checkout-btn">Proceed to checkout</button>
   </div>
 </div>
 </div>
