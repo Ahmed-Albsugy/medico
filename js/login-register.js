@@ -83,9 +83,14 @@ registerForm.addEventListener("click", async (e) => {
     const user = userCredential.user;
     sendEmailVerification(user);
     await setDoc(doc(db, "users", user.uid), {
-      username: userName.value,
-      email: email.value.trim(),
-      uid: user.uid,
+      info: {
+        username: userName.value,
+        email: email.value.trim(),
+        uid: user.uid,
+        phone: "",
+        address: "",
+        image: "../images/home/image 18.png",
+      },
     });
     showToast("Registration successful! Please verify your email.", "success");
     container.classList.remove("active");
