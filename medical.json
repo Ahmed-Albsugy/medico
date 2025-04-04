@@ -1,0 +1,855 @@
+{
+    "medicalProducts": [
+      {
+        "id": "1",
+        "name": "Ultrasound Machine",
+        "description": "High-resolution ultrasound machine for diagnostic imaging.",
+        "imageUrl": "https://storage.googleapis.com/avante/images/2145-1-dre-fs60-advance-digital-ultrasound.jpg",
+        "price": 25000.00,
+        "currency": "USD",
+        "category": "Diagnostic Imaging",
+        "manufacturer": "MedTech Inc.",
+        "specifications": {
+          "weight": "45 kg",
+          "dimensions": "120 x 60 x 80 cm",
+          "powerConsumption": "500W",
+          "warranty": "2 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "2",
+        "name": "ECG Monitor",
+        "description": "Portable ECG monitor for real-time heart rate monitoring.",
+        "imageUrl": "https://4.imimg.com/data4/XD/JT/MY-5618181/ecg-monitor.jpg",
+        "price": 1200.00,
+        "currency": "USD",
+        "category": "Cardiology",
+        "manufacturer": "CardioCare Ltd.",
+        "specifications": {
+          "weight": "2.5 kg",
+          "dimensions": "30 x 20 x 10 cm",
+          "batteryLife": "8 hours",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "3",
+        "name": "MRI Scanner",
+        "description": "Advanced MRI scanner for detailed imaging of soft tissues.",
+        "imageUrl": "https://images.squarespace-cdn.com/content/v1/669ebafa40827551d7dc8325/1721678606176-J6PA5YZIRN0OQVKNKY5W/Capital+Imaging_3T+MRI.jpeg?format=2500w",
+        "price": 1500000.00,
+        "currency": "USD",
+        "category": "Diagnostic Imaging",
+        "manufacturer": "Imaging Solutions Co.",
+        "specifications": {
+          "weight": "5000 kg",
+          "dimensions": "250 x 200 x 200 cm",
+          "magneticFieldStrength": "1.5 Tesla",
+          "warranty": "5 years"
+        },
+        "availability": false
+      },
+      {
+        "id": "4",
+        "name": "Infusion Pump",
+        "description": "Precision infusion pump for controlled delivery of fluids.",
+        "imageUrl": "https://clarity-medical.com/cdn/shop/products/Syringe-Pump.png?v=1598025113",
+        "price": 800.00,
+        "currency": "USD",
+        "category": "Therapy Equipment",
+        "manufacturer": "FlowMed Systems",
+        "specifications": {
+          "weight": "3 kg",
+          "dimensions": "25 x 15 x 10 cm",
+          "flowRateAccuracy": "±2%",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "5",
+        "name": "Ventilator",
+        "description": "ICU-grade ventilator for critical respiratory support.",
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Servo_I_Ventilator.jpg/800px-Servo_I_Ventilator.jpg",
+        "price": 5000.00,
+        "currency": "USD",
+        "category": "Respiratory Care",
+        "manufacturer": "BreathEase Corp.",
+        "specifications": {
+          "weight": "15 kg",
+          "dimensions": "50 x 40 x 30 cm",
+          "modes": "Volume Control, Pressure Control",
+          "warranty": "3 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "6",
+        "name": "X-Ray Machine",
+        "description": "Digital X-ray machine for high-quality imaging.",
+        "imageUrl": "https://i0.wp.com/www.meghmeditech.com/wp-content/uploads/2021/05/Digital-X-Ray-Machine.jpg?fit=1001%2C1001&ssl=1",
+        "price": 30000.00,
+        "currency": "USD",
+        "category": "Diagnostic Imaging",
+        "manufacturer": "Imaging Solutions Co.",
+        "specifications": {
+          "weight": "200 kg",
+          "dimensions": "150 x 100 x 100 cm",
+          "powerConsumption": "1000W",
+          "warranty": "2 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "7",
+        "name": "Defibrillator",
+        "description": "Portable defibrillator for emergency cardiac care.",
+        "imageUrl": "https://medanta.s3.ap-south-1.amazonaws.com/blogs/December2024/72W9chJaEQJw88TS3EotlbgeLNVP9J-metaSW1wbGFudGFibGUgQ2FyZGlhYyBEZWZpYnJpbGxhdG9yLmpwZw==-.jpge.com/images/defibrillator.jpg",
+        "price": 2500.00,
+        "currency": "USD",
+        "category": "Cardiology",
+        "manufacturer": "CardioCare Ltd.",
+        "specifications": {
+          "weight": "5 kg",
+          "dimensions": "40 x 30 x 20 cm",
+          "batteryLife": "4 hours",
+          "warranty": "2 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "8",
+        "name": "Blood Pressure Monitor",
+        "description": "Digital blood pressure monitor for accurate readings.",
+        "imageUrl": "https://domf5oio6qrcr.cloudfront.net/medialibrary/14234/a3f0c5eb-f51f-40ee-8cb5-e063693b926f.jpg",
+        "price": 50.00,
+        "currency": "USD",
+        "category": "Cardiology",
+        "manufacturer": "HealthTech Solutions",
+        "specifications": {
+          "weight": "0.5 kg",
+          "dimensions": "15 x 10 x 5 cm",
+          "batteryLife": "6 months",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "9",
+        "name": "Patient Monitor",
+        "description": "Multi-parameter patient monitor for ICU use.",
+        "imageUrl": "https://halomedicals.com/wp-content/uploads/2020/08/multi-para-patient-monitor-570x570.jpg",
+        "price": 4000.00,
+        "currency": "USD",
+        "category": "Critical Care",
+        "manufacturer": "MedTech Inc.",
+        "specifications": {
+          "weight": "10 kg",
+          "dimensions": "50 x 40 x 30 cm",
+          "powerConsumption": "200W",
+          "warranty": "2 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "10",
+        "name": "Anesthesia Machine",
+        "description": "Advanced anesthesia machine for surgical procedures.",
+        "imageUrl": "https://www.penlon.com/app/uploads/2024/02/Prima_460-BG-1920px.png",
+        "price": 10000.00,
+        "currency": "USD",
+        "category": "Surgical Instruments",
+        "manufacturer": "SurgicalTech Ltd.",
+        "specifications": {
+          "weight": "80 kg",
+          "dimensions": "100 x 60 x 50 cm",
+          "powerConsumption": "300W",
+          "warranty": "3 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "11",
+        "name": "CT Scanner",
+        "description": "High-speed CT scanner for detailed cross-sectional imaging.",
+        "imageUrl": "https://www.itnonline.com/sites/default/files/field/image/X0000_Philips_IQon%20Spectral%20CT%20copy.jpg",
+        "price": 200000.00,
+        "currency": "USD",
+        "category": "Diagnostic Imaging",
+        "manufacturer": "Imaging Solutions Co.",
+        "specifications": {
+          "weight": "1500 kg",
+          "dimensions": "200 x 150 x 150 cm",
+          "powerConsumption": "1500W",
+          "warranty": "5 years"
+        },
+        "availability": false
+      },
+      {
+        "id": "12",
+        "name": "Nebulizer",
+        "description": "Portable nebulizer for respiratory therapy.",
+        "imageUrl": "https://www.phoenixhealthcaresolutions.com/wp-content/uploads/2023/06/compressor-nebulizer-03-1024x1024.png",
+        "price": 100.00,
+        "currency": "USD",
+        "category": "Respiratory Care",
+        "manufacturer": "BreathEase Corp.",
+        "specifications": {
+          "weight": "1 kg",
+          "dimensions": "20 x 15 x 10 cm",
+          "batteryLife": "3 hours",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "13",
+        "name": "Surgical Table",
+        "description": "Adjustable surgical table for operating rooms.",
+        "imageUrl": "https://www.meditek.ca/wp-content/uploads/Surgery-Tables-1000x523.jpg",
+        "price": 8000.00,
+        "currency": "USD",
+        "category": "Surgical Instruments",
+        "manufacturer": "SurgicalTech Ltd.",
+        "specifications": {
+          "weight": "150 kg",
+          "dimensions": "200 x 60 x 80 cm",
+          "powerConsumption": "100W",
+          "warranty": "3 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "14",
+        "name": "Autoclave",
+        "description": "Sterilization autoclave for medical instruments.",
+        "imageUrl": "https://flightdentalsystems.com/wp-content/uploads/2017/05/Clave16-New-Model-2022-1-scaled.jpg",
+        "price": 3000.00,
+        "currency": "USD",
+        "category": "Sterilization",
+        "manufacturer": "SteriClean Inc.",
+        "specifications": {
+          "weight": "50 kg",
+          "dimensions": "80 x 60 x 60 cm",
+          "powerConsumption": "1200W",
+          "warranty": "2 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "15",
+        "name": "Dialysis Machine",
+        "description": "Hemodialysis machine for kidney failure patients.",
+        "imageUrl": "https://www.nipro-group.com/sites/default/files/styles/vrije_dimensie/public/2019-12/SurDial%2055%20Plus.png?itok=2ngP4BDa",
+        "price": 12000.00,
+        "currency": "USD",
+        "category": "Therapy Equipment",
+        "manufacturer": "RenalCare Systems",
+        "specifications": {
+          "weight": "100 kg",
+          "dimensions": "120 x 80 x 60 cm",
+          "powerConsumption": "800W",
+          "warranty": "3 years"
+        },
+        
+        "availability": true
+      },
+      {
+        "id": "16",
+        "name": "Pulse Oximeter",
+        "description": "Portable pulse oximeter for measuring oxygen saturation.",
+        "imageUrl": "https://m.media-amazon.com/images/I/61RB9mPIumL._SL1500_.jpg",
+        "price": 80.00,
+        "currency": "USD",
+        "category": "Monitoring",
+        "manufacturer": "HealthTech Solutions",
+        "specifications": {
+          "weight": "0.2 kg",
+          "dimensions": "10 x 5 x 3 cm",
+          "batteryLife": "30 hours",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "17",
+        "name": "Electrosurgical Unit",
+        "description": "High-frequency electrosurgical unit for cutting and coagulation.",
+        "imageUrl": "https://addler.com/wp-content/uploads/2021/09/WhatsApp-Image-2021-08-30-at-06.47.22.jpeg",
+        "price": 5000.00,
+        "currency": "USD",
+        "category": "Surgical Instruments",
+        "manufacturer": "SurgicalTech Ltd.",
+        "specifications": {
+          "weight": "10 kg",
+          "dimensions": "40 x 30 x 20 cm",
+          "powerConsumption": "300W",
+          "warranty": "2 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "18",
+        "name": "Fetal Doppler",
+        "description": "Handheld fetal doppler for monitoring fetal heart rate.",
+        "imageUrl": "https://facelake.com/cdn/shop/products/image3_17_032521.jpg?v=1616706869",
+        "price": 200.00,
+        "currency": "USD",
+        "category": "Obstetrics",
+        "manufacturer": "MedTech Inc.",
+        "specifications": {
+          "weight": "0.5 kg",
+          "dimensions": "15 x 10 x 5 cm",
+          "batteryLife": "10 hours",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "19",
+        "name": "Wheelchair",
+        "description": "Lightweight wheelchair for patient mobility.",
+        "imageUrl": "https://www.falconmobility.com/cdn/shop/files/JRWD503_640x640.jpg?v=1729067516",
+        "price": 300.00,
+        "currency": "USD",
+        "category": "Mobility Aids",
+        "manufacturer": "MobilityCare Ltd.",
+        "specifications": {
+          "weight": "12 kg",
+          "dimensions": "100 x 70 x 90 cm",
+          "maxLoad": "120 kg",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "20",
+        "name": "Surgical Lights",
+        "description": "LED surgical lights for operating rooms.",
+        "imageUrl": "https://www.brexlighting.com/cdn/shop/articles/LED_in_surgical_lights.jpg?v=1557847678",
+        "price": 4000.00,
+        "currency": "USD",
+        "category": "Surgical Instruments",
+        "manufacturer": "SurgicalTech Ltd.",
+        "specifications": {
+          "weight": "20 kg",
+          "dimensions": "150 x 50 x 50 cm",
+          "powerConsumption": "200W",
+          "warranty": "2 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "21",
+        "name": "Patient Bed",
+        "description": "Adjustable hospital bed for patient comfort.",
+        "imageUrl": "https://www.optium.com.tr/wp-content/uploads/ME53-2-copy-copy-scaled.jpg",
+        "price": 1500.00,
+        "currency": "USD",
+        "category": "Hospital Furniture",
+        "manufacturer": "MedFurnish Inc.",
+        "specifications": {
+          "weight": "80 kg",
+          "dimensions": "200 x 90 x 60 cm",
+          "maxLoad": "200 kg",
+          "warranty": "2 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "22",
+        "name": "Nurse Call System",
+        "description": "Wireless nurse call system for patient communication.",
+        "imageUrl": "https://www.luxelectronic.com/uploads/c/20211201123315-10027.png",
+        "price": 1000.00,
+        "currency": "USD",
+        "category": "Hospital Communication",
+        "manufacturer": "CommTech Solutions",
+        "specifications": {
+          "weight": "5 kg",
+          "dimensions": "30 x 20 x 10 cm",
+          "batteryLife": "1 year",
+          "warranty": "2 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "23",
+        "name": "Stretcher",
+        "description": "Lightweight stretcher for patient transport.",
+        "imageUrl": "https://ferno.com/ferno/media/us/products/product-model-11-emergency-stretcher-orange.jpg?ext=.jpg",
+        "price": 800.00,
+        "currency": "USD",
+        "category": "Mobility Aids",
+        "manufacturer": "MobilityCare Ltd.",
+        "specifications": {
+          "weight": "15 kg",
+          "dimensions": "200 x 60 x 40 cm",
+          "maxLoad": "150 kg",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "24",
+        "name": "Defibrillator Cabinet",
+        "description": "Wall-mounted cabinet for defibrillator storage.",
+        "imageUrl": "https://www.safety1stnz.com/wp-content/uploads/2023/03/PW523.jpeg",
+        "price": 200.00,
+        "currency": "USD",
+        "category": "Storage",
+        "manufacturer": "MedFurnish Inc.",
+        "specifications": {
+          "weight": "10 kg",
+          "dimensions": "50 x 40 x 20 cm",
+          "material": "Steel",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "25",
+        "name": "Medical Refrigerator",
+        "description": "Temperature-controlled refrigerator for storing vaccines and medicines.",
+        "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2022/3/AL/OS/KE/196149/medical-refrigerator-1000x1000.jpeg",
+        "price": 1500.00,
+        "currency": "USD",
+        "category": "Storage",
+        "manufacturer": "CoolTech Ltd.",
+        "specifications": {
+          "weight": "50 kg",
+          "dimensions": "100 x 60 x 60 cm",
+          "temperatureRange": "2°C to 8°C",
+          "warranty": "2 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "26",
+        "name": "Oxygen Concentrator",
+        "description": "Portable oxygen concentrator for respiratory support.",
+        "imageUrl": "https://bridgetocareusa.com/wp-content/uploads/2020/11/TH_IRC5P02V_Main2_LG__05561.1578113108.jpg",
+        "price": 1200.00,
+        "currency": "USD",
+        "category": "Respiratory Care",
+        "manufacturer": "BreathEase Corp.",
+        "specifications": {
+          "weight": "10 kg",
+          "dimensions": "40 x 30 x 20 cm",
+          "oxygenOutput": "5 L/min",
+          "warranty": "2 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "27",
+        "name": "Medical Scales",
+        "description": "Digital medical scales for accurate weight measurement.",
+        "imageUrl": "https://stevens.ca/media/products/fs/130-142KL.jpg",
+        "price": 300.00,
+        "currency": "USD",
+        "category": "Monitoring",
+        "manufacturer": "HealthTech Solutions",
+        "specifications": {
+          "weight": "5 kg",
+          "dimensions": "50 x 40 x 10 cm",
+          "maxLoad": "200 kg",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "28",
+        "name": "Surgical Drills",
+        "description": "High-precision surgical drills for orthopedic procedures.",
+        "imageUrl": "https://unicat.msf.org/web/image/product.product/569788/image_1024/%5BEEMDDRIE5--%5D%20SURGICAL%20DRILL%20%28Cordless%20Driver%208%29%20%2Baccessories?unique=c9d8c42",
+        "price": 2500.00,
+        "currency": "USD",
+        "category": "Surgical Instruments",
+        "manufacturer": "SurgicalTech Ltd.",
+        "specifications": {
+          "weight": "2 kg",
+          "dimensions": "30 x 20 x 10 cm",
+          "powerConsumption": "100W",
+          "warranty": "2 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "29",
+        "name": "Medical Carts",
+        "description": "Mobile medical carts for hospital use.",
+        "imageUrl": "https://www.inspital.com/inspital/dosyalar/urun/284/1128.png?m=1677763012",
+        "price": 500.00,
+        "currency": "USD",
+        "category": "Hospital Furniture",
+        "manufacturer": "MedFurnish Inc.",
+        "specifications": {
+          "weight": "20 kg",
+          "dimensions": "80 x 50 x 90 cm",
+          "material": "Stainless Steel",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "30",
+        "name": "Endoscopy System",
+        "description": "Advanced endoscopy system for minimally invasive procedures.",
+        "imageUrl": "https://endomed.com/wp-content/uploads/2024/06/EndoMed-Systems-COMBO-3-Gastrocopy-Colonscopy-System-480x690.jpg",
+        "price": 20000.00,
+        "currency": "USD",
+        "category": "Diagnostic Imaging",
+        "manufacturer": "Imaging Solutions Co.",
+        "specifications": {
+          "weight": "30 kgrasound",
+          "dimensions": "100 x 60 x 60 cm",
+          "powerConsumption": "400W",
+          "warranty": "3 years"
+        },
+        "availability": true
+      }, {
+        "id": "31",
+        "name": "Portable Ult",
+        "description": "Compact ultrasound device for point-of-care diagnostics.",
+        "imageUrl": "https://newlifescientific.com/cdn/shop/files/56105123_1920x.jpg?v=1733150144",
+        "price": 15000.00,
+        "currency": "USD",
+        "category": "Diagnostic Imaging",
+        "manufacturer": "MedTech Inc.",
+        "specifications": {
+          "weight": "5 kg",
+          "dimensions": "30 x 20 x 15 cm",
+          "batteryLife": "4 hours",
+          "warranty": "2 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "32",
+        "name": "Surgical Microscope",
+        "description": "High-magnification microscope for surgical procedures.",
+        "imageUrl": "https://www.paulig-eye-health.com/wp-content/uploads/sites/5291/2020/03/opmi_lumera_7001.jpg",
+        "price": 25000.00,
+        "currency": "USD",
+        "category": "Surgical Instruments",
+        "manufacturer": "SurgicalTech Ltd.",
+        "specifications": {
+          "weight": "50 kg",
+          "dimensions": "100 x 80 x 60 cm",
+          "powerConsumption": "200W",
+          "warranty": "3 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "33",
+        "name": "Infrared Thermometer",
+        "description": "Non-contact infrared thermometer for temperature measurement.",
+        "imageUrl": "https://governile.com/wp-content/uploads/2019/01/medical_shop_8.jpg",
+        "price": 50.00,
+        "currency": "USD",
+        "category": "Monitoring",
+        "manufacturer": "HealthTech Solutions",
+        "specifications": {
+          "weight": "0.3 kg",
+          "dimensions": "15 x 10 x 5 cm",
+          "measurementRange": "32°C to 42°C",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "34",
+        "name": "Medical Laser",
+        "description": "High-precision medical laser for dermatology and surgery.",
+        "imageUrl": "https://summuslaser.com/wp-content/uploads/2023/06/laser-horizon.webp",
+        "price": 30000.00,
+        "currency": "USD",
+        "category": "Surgical Instruments",
+        "manufacturer": "LaserMed Inc.",
+        "specifications": {
+          "weight": "20 kg",
+          "dimensions": "80 x 60 x 40 cm",
+          "powerConsumption": "500W",
+          "warranty": "2 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "35",
+        "name": "Patient Warming System",
+        "description": "Forced-air warming system for surgical patients.",
+        "imageUrl": "https://gentherm.com//wp-content/uploads/warmair_device.png",
+        "price": 2000.00,
+        "currency": "USD",
+        "category": "Therapy Equipment",
+        "manufacturer": "ThermaCare Ltd.",
+        "specifications": {
+          "weight": "10 kg",
+          "dimensions": "50 x 40 x 30 cm",
+          "powerConsumption": "300W",
+          "warranty": "2 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "36",
+        "name": "Medical Gas Outlet",
+        "description": "Wall-mounted medical gas outlet for oxygen and vacuum.",
+        "imageUrl": "https://www.precisionuk.co.uk/wp-content/uploads/2023/05/Medical-Gas-Outlets-scaled.jpg",
+        "price": 300.00,
+        "currency": "USD",
+        "category": "Hospital Infrastructure",
+        "manufacturer": "GasTech Solutions",
+        "specifications": {
+          "weight": "2 kg",
+          "dimensions": "20 x 15 x 10 cm",
+          "material": "Stainless Steel",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "37",
+        "name": "Portable X-Ray",
+        "description": "Mobile X-ray machine for bedside imaging.",
+        "imageUrl": "https://dentaquick.com/storage/0b9cc53336c8d4b6e3e515fecd9b81fb//cri/5fb6936d76aad8fe2fbcef6d129f1f9c___optimized_468_384.png",
+        "price": 50000.00,
+        "currency": "USD",
+        "category": "Diagnostic Imaging",
+        "manufacturer": "Imaging Solutions Co.",
+        "specifications": {
+          "weight": "100 kg",
+          "dimensions": "150 x 80 x 80 cm",
+          "powerConsumption": "800W",
+          "warranty": "3 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "38",
+        "name": "Medical Suction Pump",
+        "description": "Portable suction pump for medical procedures.",
+        "imageUrl": "https://static.wixstatic.com/media/2fbcd8_44bd80bc43344846abc9aab960074d6c~mv2.jpg/v1/fill/w_475,h_475,al_c,q_85/2fbcd8_44bd80bc43344846abc9aab960074d6c~mv2.jpg",
+        "price": 400.00,
+        "currency": "USD",
+        "category": "Therapy Equipment",
+        "manufacturer": "FlowMed Systems",
+        "specifications": {
+          "weight": "3 kg",
+          "dimensions": "25 x 15 x 10 cm",
+          "powerConsumption": "50W",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "39",
+        "name": "Medical Air Compressor",
+        "description": "High-performance air compressor for medical use.",
+        "imageUrl": "https://taurushealthcareindia.com/wp-content/uploads/2020/05/Medical-Air-Model-11.jpg",
+        "price": 1500.00,
+        "currency": "USD",
+        "category": "Hospital Infrastructure",
+        "manufacturer": "GasTech Solutions",
+        "specifications": {
+          "weight": "30 kg",
+          "dimensions": "80 x 60 x 60 cm",
+          "powerConsumption": "1000W",
+          "warranty": "2 years"
+        },
+        "availability": true
+      },
+      {
+        "id": "40",
+        "name": "Medical Waste Disposal",
+        "description": "Safe disposal system for medical waste.",
+        "imageUrl": "https://i0.wp.com/skymedical.shop/wp-content/uploads/2023/09/waste.png?fit=600%2C600&ssl=1",
+        "price": 1000.00,
+        "currency": "USD",
+        "category": "Hospital Infrastructure",
+        "manufacturer": "EcoMed Ltd.",
+        "specifications": {
+          "weight": "50 kg",
+          "dimensions": "100 x 60 x 60 cm",
+          "capacity": "50 liters",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "41",
+        "name": "Medical Trolley",
+        "description": "Stainless steel trolley for hospital use.",
+        "imageUrl": "https://www.mercura.com/app/uploads/2018/02/chariots-soins-medicar.jpg",
+        "price": 200.00,
+        "currency": "USD",
+        "category": "Hospital Furniture",
+        "manufacturer": "MedFurnish Inc.",
+        "specifications": {
+          "weight": "10 kg",
+          "dimensions": "80 x 50 x 90 cm",
+          "material": "Stainless Steel",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "42",
+        "name": "Medical Stethoscope",
+        "description": "High-quality stethoscope for auscultation.",
+        "imageUrl": "https://i5.walmartimages.com/seo/OUNONA-Double-Sided-Stethoscope-Portable-Medical-Aid-Auscultation-Stethoscope-Device-Equipment-Tool-Red_91144ab5-8cfe-42c0-af3d-dd582282e970.3ce92fcee9b059d92da4575cdba085f2.jpeg",
+        "price": 50.00,
+        "currency": "USD",
+        "category": "Diagnostic Tools",
+        "manufacturer": "HealthTech Solutions",
+        "specifications": {
+          "weight": "0.2 kg",
+          "dimensions": "30 x 10 x 5 cm",
+          "material": "Aluminum",
+          "warranty": "1 year"
+        },
+        "availability": true
+      },
+      {
+        "id": "43",
+        "name": "Medical Gloves",
+        "description": "Disposable gloves for medical use.",
+        "imageUrl": "https://m.media-amazon.com/images/I/719DdR3Pf7L._AC_SL1500_.jpg",
+        "price": 10.00,
+        "currency": "USD",
+        "category": "Consumables",
+        "manufacturer": "SafeHands Ltd.",
+        "specifications": {
+          "weight": "0.1 kg",
+          "material": "Latex",
+          "size": "Medium",
+          "warranty": "N/A"
+        },
+        "availability": true
+      },
+      {
+        "id": "44",
+        "name": "Medical Mask",
+        "description": "Surgical masks for infection control.",
+        "imageUrl": "https://images-cdn.ubuy.co.in/636de16dcacbd51ee02db883-breathpower-disposable-medical-face-mask.jpg",
+        "price": 5.00,
+        "currency": "USD",
+        "category": "Consumables",
+        "manufacturer": "SafeHands Ltd.",
+        "specifications": {
+          "weight": "0.05 kg",
+          "material": "Polypropylene",
+          "size": "One Size",
+          "warranty": "N/A"
+        },
+        "availability": true
+      },
+      {
+        "id": "45",
+        "name": "Medical Syringe",
+        "description": "Disposable syringes for injections.",
+        "imageUrl": "https://5.imimg.com/data5/GC/GR/CY/SELLER-6685679/medical-syringes-1000x1000.jpg",
+        "price": 1.00,
+        "currency": "USD",
+        "category": "Consumables",
+        "manufacturer": "SafeHands Ltd.",
+        "specifications": {
+          "weight": "0.01 kg",
+          "capacity": "5 ml",
+          "material": "Plastic",
+          "warranty": "N/A"
+        },
+        "availability": true
+      },
+      {
+        "id": "46",
+        "name": "Medical Bandage",
+        "description": "Sterile bandages for wound care.",
+        "imageUrl": "https://images-cdn.ubuy.co.in/6655e98e7f6a5f02e5690af8-d-h-medical-pack-of-24-gauze-bandage.jpg",
+        "price": 2.00,
+        "currency": "USD",
+        "category": "Consumables",
+        "manufacturer": "SafeHands Ltd.",
+        "specifications": {
+          "weight": "0.05 kg",
+          "size": "10 cm x 5 cm",
+          "material": "Cotton",
+          "warranty": "N/A"
+        },
+        "availability": true
+      },
+      {
+        "id": "47",
+        "name": "Medical Catheter",
+        "description": "Urinary catheter for patient care.",
+        "imageUrl": "https://www.mountainside-medical.com/cdn/shop/products/Dynarex-All-Silicone-Foley-Catheter-Sterile-100_-Silicone_1800x1800.jpg?v=1675253093",
+        "price": 15.00,
+        "currency": "USD",
+        "category": "Consumables",
+        "manufacturer": "SafeHands Ltd.",
+        "specifications": {
+          "weight": "0.1 kg",
+          "size": "14 Fr",
+          "material": "Silicone",
+          "warranty": "N/A"
+        },
+        "availability": true
+      },
+      {
+        "id": "48",
+        "name": "Medical IV Set",
+        "description": "Intravenous infusion set for fluid delivery.",
+        "imageUrl": "https://cdn11.bigcommerce.com/s-klpb3tp0jd/images/stencil/640w/products/1936/3485/image__84494.1642965307.png?c=1",
+        "price": 10.00,
+        "currency": "USD",
+        "category": "Consumables",
+        "manufacturer": "SafeHands Ltd.",
+        "specifications": {
+          "weight": "0.2 kg",
+          "length": "150 cm",
+          "material": "PVC",
+          "warranty": "N/A"
+        },
+        "availability": true
+      },
+      {
+        "id": "49",
+        "name": "Medical Gauze",
+        "description": "Sterile gauze for wound dressing.",
+        "imageUrl": "https://i5.walmartimages.com/seo/Sterile-Gauze-Pads-4-x-4-Individually-Wrapped-50-Packs-100-Pieces-Total_014e482f-999a-4a3a-8a01-686e7b01d07b.719dddc8fb23c6538ccdf2362cc94266.jpeg",
+        "price": 3.00,
+        "currency": "USD",
+        "category": "Consumables",
+        "manufacturer": "SafeHands Ltd.",
+        "specifications": {
+          "weight": "0.05 kg",
+          "size": "10 cm x 10 cm",
+          "material": "Cotton",
+          "warranty": "N/A"
+        },
+        "availability": true
+      },
+      {
+        "id": "50",
+        "name": "Medical Scissors",
+        "description": "Surgical scissors for medical procedures.",
+        "imageUrl": "https://www.firstaid.co.uk/images/products/large/Q2319PK3.jpg",
+        "price": 20.00,
+        "currency": "USD",
+        "category": "Surgical Instruments",
+        "manufacturer": "SurgicalTech Ltd.",
+        "specifications": {
+          "weight": "0.1 kg",
+          "length": "15 cm",
+          "material": "Stainless Steel",
+          "warranty": "1 year"
+        },  "availability": true
+      }
+
+      
+    ]
+  }
