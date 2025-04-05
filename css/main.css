@@ -2,7 +2,10 @@
 :root {
     --mainGreenColor: #304D30;
     --btnGreenColor: #28A745;
-}  
+    --containerPadding: 16px 5%;
+    --fontPoppones: "Poppins", sans-serif;
+    --fontNunito: "Nunito", sans-serif;
+}
 
 /* ===================== header styling =================== */
 
@@ -67,7 +70,7 @@
     top: 50%;
     transform: translateY(-50%);
     height: 100%;
-    
+
 }
 
 .search-btn img {
@@ -86,12 +89,16 @@
     width: 24px;
     cursor: pointer;
 }
+.profile-container{
+    cursor: pointer;
+    position: relative;
+}
 
 .profile {
     display: flex;
     align-items: center;
     gap: 8px;
-    cursor: pointer;
+   
 }
 
 .profile img:first-child {
@@ -103,6 +110,38 @@
 
 .profile img:last-child {
     width: 18px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 120px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: none; /* Hidden by default */
+}
+/* Show dropdown when not hidden */
+.dropdown.show {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+.dropBtn{
+    border: none;
+    background: none;
+    cursor: pointer;
+
+}
+.dropdown-item:hover {
+    background-color: #f4f4f4;
 }
 
 /* Responsive Design */
@@ -141,14 +180,545 @@
         gap: 12px;
     }
 }
+
+/* ======================= Hero Section ==================== */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mainGreenColor);
+    padding: var(--containerPadding);
+}
+
+.hero-h {
+    font-family: var(--fontNunito);
+    font-weight: 800px;
+    color: #FFFFFF;
+    font-size: 60px;
+}
+
+.hero-p {
+    color: #CCE5FF;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: var(--fontPoppones);
+}
+
+.heroBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: var(--btnGreenColor);
+    border: none;
+}
+
+/* ======================= offers ==================== */
+.offers {
+    display: flex;
+    gap: 20px;
+    padding: var(--containerPadding);
+}
+
+/* Individual Offer Card */
+.offer-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 305px;
+    height: 100px;
+    border-radius: 12px;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #020A13;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Colors */
+.green {
+    background-color: #28A745;
+    ;
+}
+
+.yellow {
+    background-color: #F4D279;
+}
+
+.light-green {
+    background-color: #6FD600;
+}
+
+.purple {
+    background-color: #EDCFFC;
+}
+
+/* Arrow */
+.arrow {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* ======================= new products Section ==================== */
+.newProduct {
+    padding: var(--containerPadding);
+}
+
+.newHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.newHead h2 {
+    font-family: var(--fontNunito);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.newHead a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--btnGreenColor);
+    font-family: var(--fontNunito);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+.products-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.product-card {
+    position: relative;
+    width: 250px;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.icon-heart{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 25px;
+    color: var(--btnGreenColor);
+    cursor: pointer;
+}
+.icon-heart:hover{
+    color: var(--mainGreenColor);
+}
+.product-card img {
+    /* width: 100%;
+    height: auto; */
+    text-align: center;
+}
+.card-img {
+    width: 100%;
+    height: 240px;
+}
+
+.product-info {
+    padding: 5px 15px;
+    border-top: 1px solid #ddd;
+}
+.product-info h3 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.product-info p {
+    font-size: 16px;
+    color: gray;
+    margin: 0;
+}
+.add-to-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:7px;
+    background: var(--btnGreenColor);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-to-cart:hover {
+    background:var(--mainGreenColor);
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .products-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+}
+
+/* ======================= offers products Section ==================== */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16-column layout */
+    gap: 10px;
+    margin-top: 20px;
+    padding: var(--containerPadding);
+}
+
+.left-side {
+    display: flex;
+    grid-column: span 7;
+    background: #F1FAFE;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.bg-grn-p {
+    width: fit-content;
+    gap: 10px;
+    border-radius: 8px;
+    padding: 6px 16px;
+    background-color: var(--btnGreenColor);
+    color: white;
+    font-family: var(--fontPoppones);
+    font-weight: 500;
+    font-size: 20px;
+
+}
+
+.left-side h2 {
+    font-family: var(--fontNunito);
+    font-weight: 700;
+    font-size: 36px;
+
+}
+
+.pHair {
+    font-family: var(--fontNunito);
+    font-weight: 600;
+    font-size: 32px;
+
+}
+
+.oldPrice {
+    font-family: var(--fontPoppones);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-decoration: line-through;
+
+}
+
+.newPrice {
+    font-family: var(--fontNunito);
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+
+.tax {
+    font-family: var(--fontPoppones);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+
+.right-side {
+    display: grid;
+    grid-column: span 5;
+    gap: 20px;
+}
+
+.upDiv {
+    display: flex;
+    background-color: #FDF7E8;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.downDiv {
+    display: flex;
+    background-color: #E8FFE7;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.bg-grn-ps {
+    width: fit-content;
+    gap: 10px;
+    border-radius: 8px;
+    padding: 6px 16px;
+    background-color: var(--btnGreenColor);
+    color: white;
+    font-family: var(--fontPoppones);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.pHairs {
+    font-family: var(--fontNunito);
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.oldPrices {
+    font-family: var(--fontPoppones);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-decoration: line-through;
+}
+
+.newPrices {
+    font-family: var(--fontNunito);
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.taxs {
+    font-family: var(--fontPoppones);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+/* ======================= offers products Section ==================== */
+.bgblue {
+    background-color: #BFE5C7;
+}
+
+.bgpink {
+    background-color: #FAEDC9;
+}
+
+.bgmint {
+    background-color: #C5EF99;
+}
+
+.bgPurple {
+    background-color: #F8ECFE;
+}
+
+.offer-card2 {
+    width: 25%;
+    /* height: 100px; */
+    border-radius: 12px;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    color: #020A13;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: var(--fontNunito);
+
+}
+
+.ccc {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+/* ======================= Unlock Section ==================== */
+.unlock-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F6FAFF;
+    padding: var(--containerPadding);
+}
+
+.unlock-h {
+    font-family: var(--fontNunito);
+    font-weight: 800px;
+    color: #FFFFFF;
+    font-size: 48px;
+    color: #020A13;
+}
+
+.unlock-p1 {
+    color: #020A13;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    font-family: var(--fontPoppones);
+}
+
+.unlock-p2 {
+    color: #373D45;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: var(--fontPoppones);
+}
+
+.unlockBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    padding: 10px 14px;
+    background-color: var(--btnGreenColor);
+    border: none;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+
+.unlockBtn:hover {
+    cursor: pointer;
+}
+
+/* ======================= Latest News Section ==================== */
+.latest-h {
+    font-family: var(--fontNunito);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.latest-news {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 40px;
+    margin-top: 20px;
+    padding: var(--containerPadding);
+}
+
+.one-left {
+    display: grid;
+    grid-column: span 5;
+}
+.card-img-top{
+    width: 100%;
+}
+
+.three-right {
+    display: grid;
+    grid-column: span 7;
+    gap: 20px;
+}
+.newsCard{
+    display: flex;
+    gap: 20px;
+}
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.category {
+    padding: 6px 12px;
+    background: #F2F8FF;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #28A745;
+}
+.card-title {
+    font-family: var(--fontNunito);
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+}
+
+.card-text {
+    font-family: var(--fontPoppones);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #373D45;
+}
+
+.card-btn {
+    border-radius: 8px;
+    padding: 14px 24px;
+    border: none;
+    background-color: var(--btnGreenColor);
+    color: white;
+}
+.card-content .title{
+    font-family: var(--fontNunito);
+font-weight: 500;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+
+}
+.card-content .description{
+    font-family: var(--fontPoppones);
+    font-weight: 400;
+    font-size: 16px;
+color: #373D45;    
+}
+.card-content .read-more {
+    gap: 10px;
+    border-radius: 8px;
+    padding: 12px 24px;
+background-color: var(--btnGreenColor);
+color: #FFFFFF;
+border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* ===================== footer styling =================== */
 .footer {
     background: var(--mainGreenColor);
     color: #E0EEF9;
-    padding: 16px 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: var(--containerPadding);
 }
 
 .footer-container {
@@ -174,16 +744,18 @@
 }
 
 
- 
- .footLinks a:hover{
-    color: #FFFFFF; 
- }
- .footer-section  a{
+
+.footLinks a:hover {
+    color: #FFFFFF;
+}
+
+.footer-section a {
     text-decoration: none;
     color: #E0EEF9;
     font-size: 16px;
 }
-.footer-section  a:hover {
+
+.footer-section a:hover {
     color: #FFFFFF;
 }
 
@@ -193,6 +765,7 @@
     gap: 8px;
     font-size: 16px;
 }
+
 .social-icons {
     display: flex;
     gap: 16px;
@@ -215,7 +788,8 @@
     align-items: center;
     justify-content: space-between;
 }
-.innerFootBtm{
+
+.innerFootBtm {
     display: flex;
     justify-content: space-between;
     align-items: center;
