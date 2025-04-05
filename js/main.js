@@ -1,4 +1,5 @@
 
+
 document.addEventListener("DOMContentLoaded", function () {
     const profileHeader = document.querySelector(".profile");
     const dropdown = document.getElementById("dropdown-menu");
@@ -55,3 +56,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
        updateButton();
 });
+// =====================================================
+
+// function getData() {
+//      var data = getDoc(db,products)
+//     if (data.exits())
+//         console.log(data.data());
+        
+// }
+// getData()
+
+// async function fetchProducts() {
+//     try {
+//       const querySnapshot = await getDoc(collection(db, "products"));
+//       querySnapshot.forEach((doc) => {
+//         const product = doc.data();
+//         console.log(product);
+        
+//       });
+//     } catch (error) {
+//       console.error("Error fetching products: ", error);
+//       }
+//     }
+// fetchProducts()
+// console.log(fetchProducts());
+
+
