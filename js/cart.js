@@ -1,5 +1,14 @@
-
-document.addEventListener("DOMContentLoaded", () => {
+import {
+  db,
+  collection,
+  addDoc,
+  getDoc,
+  doc,
+  updateDoc,
+  setDoc,
+  arrayUnion,
+} from "./firebase.js";
+document.addEventListener("DOMContentLoaded", async () => {
   const cartTable = document.querySelector(".cart-table tbody");
   const subtotalElement = document.querySelector(".cart-total p span");
   const totalElement = document.querySelector(".total span");
@@ -9,7 +18,32 @@ document.addEventListener("DOMContentLoaded", () => {
   const checkoutBtn = document.querySelector(".checkout-btn");
   let discount = 0;
 
-  var cart = JSON.parse(localStorage.getItem("cart")) || [];
+  var cart = [];
+
+  let docSnap = [];
+  docSnap = await getDoc(doc(db, "users", "2omM5yP8bUOJ30LqOyL2UpS0BBy1"));
+  if (docSnap.exists()) {
+    console.log("Document data:", docSnap.data().cart);
+    for (let i = 0; i < docSnap.data().cart.length; i++) {
+      console.log(docSnap.data().cart[i]);
+      await getDoc(doc(db, "products", docSnap.data().cart[i])).then((doc) => {
+        if (doc.exists()) {
+          const productData = doc.data();
+          const cartItem = {
+            id: doc.id,
+            name: productData.name,
+            price: productData.price,
+            image: productData.imageUrl,
+            qty: 1,
+          };
+          console.log(cartItem);
+          cart.push(cartItem);
+        } else {
+          console.log("No such document!");
+        }
+      });
+    }
+  }
   var total = 0;
   cart.forEach((item) => {
     const row = document.createElement("tr");
@@ -19,19 +53,25 @@ document.addEventListener("DOMContentLoaded", () => {
                   <span>${item.name}</span>
             </td>
             <td>${item.price}</td>
-            <td><input type="number" value="${item.qty}" min="1" max="99"></td>
-            <td>$${item.price * item.qty}</td>
+            <td><input type="number" value="1" id="product-quantity-${item.id}" min="1" max="99"></td>
+            <td>$${item.price}</td>
             <td><button class="remove-btn">Remove</button></td>
         `;
     // <td><button class="remove-btn">Remove</button></td>
     cartTable.appendChild(row);
     total += item.price * item.qty;
 
-    row.querySelector(".remove-btn").addEventListener("click", () => {
+    row.querySelector(".remove-btn").addEventListener("click", async () => {
       cart = cart.filter((cartItem) => cartItem.id !== item.id);
-      localStorage.setItem("cart", JSON.stringify(cart));
       row.remove();
       updateCart();
+      try {
+        const userRef = doc(db, "users", "2omM5yP8bUOJ30LqOyL2UpS0BBy1");
+        const updatedCart = cart.map((cartItem) => cartItem.id);
+        await updateDoc(userRef, { cart: updatedCart });
+      } catch (error) {
+        console.error("Error removing from Firebase:", error);
+      }
     });
   });
 
@@ -59,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
   cartTable.addEventListener("input", updateCart);
 
   applyCouponBtn.addEventListener("click", () => {
-    if (couponInput.value === "DISCOUNT10") {
+    if (couponInput.value === "123") {
       discount = 100;
       alert("Coupon Applied: $100 Off");
     } else {
@@ -69,13 +109,13 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCart();
   });
 
- // document.querySelector(".update-btn").addEventListener("click", updateCart);
+  // document.querySelector(".update-btn").addEventListener("click", updateCart);
 
- // returnBtn.addEventListener("click", () => {
- //   window.location.href = "index.html";
- // });
+  // returnBtn.addEventListener("click", () => {
+  //   window.location.href = "index.html";
+  // });
 
- // document.getElementById("checkout-btn").addEventListener("click", checkout);
+  // document.getElementById("checkout-btn").addEventListener("click", checkout);
   //         function () {
   //       const isLoggedIn = false;
 
@@ -86,63 +126,48 @@ document.addEventListener("DOMContentLoaded", () => {
   //       }
   //     }
   // );
- 
 
   function isUserSignedIn() {
-
-      return localStorage.getItem('userLoggedIn') === 'true'; 
+    return localStorage.getItem("userLoggedIn") === "true";
   }
-  
-  document.getElementById('checkout-btn').addEventListener('click', function() {
-      if (isUserSignedIn()) {
-          window.location.href = 'checkout.html'; // توجيه لصفحة checkout
-      } else {
 
- window.location.href = 'login-register.html';     
- }
+  checkoutBtn.addEventListener("click", async function () {
+    if (isUserSignedIn()) {
+      for (let index = 0; index < cart.length; index++) {
+        cart[index].qty = document.getElementById(
+          "product-quantity-" + cart[index].id
+        ).value;
+      }
+      let order = {
+        items: cart,
+        total: window.total || 0,
+        date: new Date().toLocaleDateString(),
+        status: "pending",
+        paymentMethod: "none",
+        paymentStatus: "none",
+        userId: "2omM5yP8bUOJ30LqOyL2UpS0BBy1",
+      };
+      console.log("Order before saving:", order);
+
+      try {
+        await updateDoc(doc(db, "users", "2omM5yP8bUOJ30LqOyL2UpS0BBy1"), {
+          orders: arrayUnion(order),
+        });
+        console.log("Order placed successfully!");
+        alert("Order placed successfully!");
+      } catch (error) {
+        console.error("Error adding order:", error);
+      }
+
+      // window.location.href = "checkout.html";
+    } else {
+      window.location.href = "login-register.html";
+    }
   });
 
-  
-  function checkout() {
-    const isLoggedIn = true;
-
-    if (!isLoggedIn) {
-    window.location.href = "signin.html"; 
-    }
-    if (!cart || cart.length === 0) {
-      alert("Your cart is empty!");
-      resetButtonState();
-      return;
-    }
-
-    // Generate order data
-    const orderId = "ORD-" + Date.now();
-    const orderData = {
-      orderId: orderId,
-      items: cart,
-      total: total,
-      status: "pending",
-      paymentMethod: "none",
-      paymentStatus: "none",
-      date: new Date().toISOString(),
-    };
-
-    // Save to Firebase
-    window.db
-      .ref("orders")
-      .push(orderData)
-      .then(() => {
-        alert(`Order #${orderId} placed successfully!`);
-        localStorage.clear();
-        localStorage.removeItem("cart");
-        window.location.replace("orders.html");
-      })
-      .catch((error) => {
-        console.error("Error saving order:", error);
-        alert("Error placing order. Please try again.");
-      })
-      .finally(() => {
-        resetButtonState();
-      });
+  function getCookie(name) {
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop().split(";").shift();
   }
 });

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const productId = urlParams.get("id");
   var productData = null;
 
-  fetch("medical.json")
+  fetch("../medical.json")
     .then((response) => response.json()) // Parse JSON
     .then((data) => {
       console.log(data);
@@ -140,7 +140,6 @@ document.addEventListener("DOMContentLoaded", function () {
         image: this.getAttribute("data-image"),
         qty: quantity,
       });
-     
     }
     localStorage.setItem("cart", JSON.stringify(cart));
   }
